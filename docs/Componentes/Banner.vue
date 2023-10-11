@@ -41,9 +41,7 @@
 }
 
 @media (max-width: 768px) {
-    .banner {
-        height: 50vh;
-    }
+    
 
     .banner .fundo {
         padding: 50px 20px;
@@ -59,9 +57,7 @@
 }
 
 @media (max-width: 576px) {
-    .banner {
-        height: 40vh;
-    }
+    
 
     .banner .fundo {
         padding: 20px 20px;
@@ -77,9 +73,7 @@
 }
 
 @media (max-width: 400px) {
-    .banner {
-        height: 30vh;
-    }
+    
 
     .banner .fundo {
         padding: 20px 20px;
