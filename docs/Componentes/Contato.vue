@@ -29,6 +29,8 @@
     text-align: center;
     padding: 20px 10px;
     border-radius: 5px;
+    max-width: 50rem;
+    margin: auto;
 }
 
 .form-group {
