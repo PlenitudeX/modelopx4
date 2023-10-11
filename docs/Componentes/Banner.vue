@@ -57,4 +57,40 @@
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 576px) {
+    .banner {
+        height: 40vh;
+    }
+
+    .banner .fundo {
+        padding: 20px 20px;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner {
+        height: 30vh;
+    }
+
+    .banner .fundo {
+        padding: 20px 20px;
+    }
+
+    .banner h1 {
+        font-size: 1.2rem;
+    }
+
+    .banner p {
+        font-size: 0.8rem;
+    }
+}
 </style>
