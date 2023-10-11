@@ -168,3 +168,19 @@
 .VPNavBarExtra, .VPNavScreenAppearance, .VPDocFooter, .VPNavBarAppearance {
   display: none !important;
 }
+
+
+.product-button {
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-button:hover {
+  background-color: #d58a00;
+}

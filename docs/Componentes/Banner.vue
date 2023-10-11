@@ -1,12 +1,12 @@
 <template>
-    <section class="banner">
+    <section id="banner" class="banner">
         <div class="fundo">
             <h1>Bem-vindo à PetShop Amigo Fiel</h1>
             <p>Na PetShop Amigo Fiel, amamos animais tanto quanto você. Nossa loja é o paraíso para todos os amantes de
                 animais de estimação, onde você encontrará tudo o que precisa para cuidar e mimar seu companheiro peludo.
             </p>
             <a href="#contato">
-                <button class="btn">Saiba mais</button>
+                <button class="product-button">Saiba mais</button>
             </a>
         </div>
     </section>
@@ -38,17 +38,6 @@
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
-}
-
-.banner .btn {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {

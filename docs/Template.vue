@@ -5,8 +5,10 @@
         <!-- PRODUTOS EM DESTAQUE -->
         <Destaques />
         <!-- CONHEÇA NOSSA EQUIPE -->
-        <h1>Conheça quem cuida do seu pet!</h1>
-        <VPTeamMembers size="small" :members="members" />
+        <section id="equipe">
+          <h1>Conheça quem cuida do seu pet!</h1>
+          <VPTeamMembers size="small" :members="members" />
+        </section>
         <!-- SERVIÇOS -->
         <Servicos />
         <!-- CONTATO -->

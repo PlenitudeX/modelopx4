@@ -7,7 +7,7 @@
                 <p>O seu melhor amigo merece o melhor cuidado.</p>
             </div>
             <div class="footer-contact">
-                <h4>Contato</h4>
+                <h3>Contato</h3>
                 <ul>
                     <li><strong>Endereço:</strong> Rua das Petúnias, 1234</li>
                     <li><strong>Telefone:</strong> (55) 5555-5555</li>
@@ -15,7 +15,7 @@
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Redes Sociais</h4>
+                <h3>Redes Sociais</h3>
                 <ul>
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Instagram</a></li>
@@ -32,7 +32,7 @@
 footer {
     background-color: #3498db;
     color: #fff;
-    padding: 60px 0 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -47,7 +47,7 @@ footer {
     margin: 0 1rem;
 }
 
-.footer-logo h3 {
+.footer-logo h3, .footer-contact h3, .footer-social h3 {
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 1rem;
@@ -64,13 +64,7 @@ footer {
     margin: 0 1rem;
 }
 
-.footer-contact h4, .footer-social h4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0 0 1rem;
-}
-
-.footer-contact ul .footer-social ul {
+.footer-contact ul, .footer-social ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -94,22 +88,8 @@ footer {
     text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-    .footer-content {
-        flex-wrap: nowrap;
-    }
-
-    .footer-logo {
-        margin: 0;
-    }
-
-    .footer-contact {
-        margin: 0;
-    }
-
-    .footer-social {
-        margin: 0;
-    }
+.footer-logo, .footer-contact, .footer-social {
+    padding: 15px 0
 }
 
 </style>

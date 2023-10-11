@@ -1,5 +1,5 @@
 <template>
-    <section class="services">
+    <section id="services" class="services">
         <h1>Serviços</h1>
         <div class="services-list">
             <div class="service">
@@ -34,6 +34,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fafafa;
+    padding: 10px 5px;
 }
 
 .services-list {
@@ -48,7 +50,7 @@
     align-items: center;
     width: 300px;
     margin: 1rem;
-    /* border: 1px solid black; */
+    background-color: #fff;
     box-shadow: 1px 1px 10px #ccc;
     padding: 1rem;
     border-radius: 10px;

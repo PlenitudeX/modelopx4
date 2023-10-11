@@ -1,19 +1,19 @@
 <template>
-    <h1>Nossos Principais Serviços</h1>
-    <div class="products">
-        <div class="product" v-for="product in products" :key="product.id">
-            <img :src="product.image" alt="Imagem do Produto">
-            <h2>{{ product.name }}</h2>
-            <p>{{ product.description }}</p>
-            <p>Preço: R$ {{ product.price }}</p>
-            <button class="product-button">Comprar</button>
+    <section id="destaque">
+        <h1>Nossos Produtos Destaques</h1>
+        <div class="products">
+            <div class="product" v-for="product in products" :key="product.id">
+                <img :src="product.image" alt="Imagem do Produto">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Preço: R$ {{ product.price }}</p>
+                <button class="product-button">Comprar</button>
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
 const products = [
     {
         id: 1,
@@ -80,17 +80,6 @@ h1 {
     font-size: 1rem;
     font-weight: 400;
     margin: 0.5rem 0;
-}
-
-.product-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 @media (min-width: 768px) {
