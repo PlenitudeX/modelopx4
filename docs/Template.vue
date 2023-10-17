@@ -53,19 +53,11 @@ const members = [
   },
 ]
 
-const apiKey = 'ePYExNrjYIelZMMPOxTxqaB42saDaaqizfGIoX8nv0koqkQRlb81sOZNz2nLRh6I';
-const body = {
-  "collection": "PetShop",
-  "database": "Modelospx",
-  "dataSource": "ClusterPx",
-  "projection": { "_id": false },
-};
-
 const titulo = ref('')
 
 async function buscarDados() {
   try {
-    const dados = await mongoFind(apiKey, body);
+    const dados = await mongoFind();
     titulo.value = dados[0].titulo;
     return titulo.value
   } catch (erro) {
