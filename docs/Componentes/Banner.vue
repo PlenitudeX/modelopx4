@@ -1,8 +1,8 @@
 <template>
     <section id="banner" class="banner">
         <div :style="{color}" class="fundo">
-            <h1>Bem-vindo à PetShop Amigo Fiel</h1>
-            <p>Na PetShop Amigo Fiel, amamos animais tanto quanto você. Nossa loja é o paraíso para todos os amantes de
+            <h1>Bem-vindo à {{ title }}</h1>
+            <p>Na {{ title }}, amamos animais tanto quanto você. Nossa loja é o paraíso para todos os amantes de
                 animais de estimação, onde você encontrará tudo o que precisa para cuidar e mimar seu companheiro peludo.
             </p>
             <a href="#contato">
@@ -15,9 +15,11 @@
 <script setup lang="ts">
 import Tema from '../../tema.json'
 
-const props = defineProps<{
-    tema: string
-}>()
+
+const props = defineProps({
+    tema: String,
+    title: String
+})
 
 const style = props.tema || 0
 

@@ -4,8 +4,8 @@ import axios from 'axios';
 const makePostRequest = async () => {
   try {
     const body: any = {
-      "collection": "Afiliado",
-  "database": "Executiva",
+      "collection": "PetShop",
+  "database": "Modelospx",
   "dataSource": "ClusterPx",
   "projection": { "_id": false },
     };
@@ -31,15 +31,11 @@ const makePostRequest = async () => {
   }
 };
 
-
 const teste =  await makePostRequest();
-
-// const nome = JSON.parse(teste);
-
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: teste[0].Nome || "Pets & cia",
+  title: teste[0].titulo || "Pets & cia",
   description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
