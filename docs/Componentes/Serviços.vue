@@ -1,40 +1,58 @@
 <template>
-    <section id="services" class="services">
-        <h1>Serviços</h1>
+    <section :style="{background: body}" id="services" class="services">
+        <h1 :style="{color: Primary}">Serviços</h1>
         <div class="services-list">
-            <div class="service">
-                <img src="https://picsum.photos/2000/1000" alt="Serviço 1" />
-                <h2>Adesrador</h2>
-                <p>
-                    Adestramos seu pet para que ele se torne um animal mais dócil e amigável.
-                    Contamos com profissionais experientes e capacitados para atender seu pet da melhor forma possível e com o melhor preço do mercado.
-                    Venha conhecer nosso espaço e nossos profissionais.
-                </p>
-            </div>
-            <div class="service">
-                <img src="https://picsum.photos/2000/1000" alt="Serviço 2" />
-                <h2>Banho e Tosa</h2>
-                <p>
-                    Nosso serviço de banho e tosa transforma seu pet em uma verdadeira estrela! Nossos profissionais dedicados cuidam da higiene, beleza e bem-estar do seu companheiro, deixando-o limpo, cheiroso e com um visual incrível. Seu pet merece esse mimo!
-                </p>
-            </div>
-            <div class="service">
-                <img src="https://picsum.photos/2000/1000" alt="Serviço 3" />
-                <h2>Spa Day</h2>
-                <p>
-                    Proporcione ao seu pet um dia de relaxamento e luxo com o nosso serviço de Spa Day. Mime seu amigo peludo com banho relaxante, massagem suave, tratamento facial e unhas perfeitas. Um dia de mimos e bem-estar para seu pet.
-                </p>
+            <div :style="{background: white}" v-for="service in services" :key="service.id"  class="service">
+                <img :src="service.img" :alt="service.name" />
+                <h2 :style="{color: text}">{{ service.name }}</h2>
+                <p>{{ service.description }}</p>
             </div>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+import Tema from '../../tema.json'
+
+const props = defineProps<{
+    tema: string
+}>()
+
+const style = props.tema
+
+const body = Tema[style].$schema.Body
+const Primary = Tema[style].$schema.Primary
+const white = Tema[style].$schema.White
+const text = Tema[style].$schema.Secondary
+
+const services = [
+    {
+        id: 1,
+        name: 'Adestrador',
+        description: 'Adestramos seu pet para que ele se torne um animal mais dócil e amigável. Contamos com profissionais experientes e capacitados para atender seu pet da melhor forma possível e com o melhor preço do mercado. Venha conhecer nosso espaço e nossos profissionais.',
+        img: 'https://picsum.photos/2000/1000'
+    },
+    {
+        id: 2,
+        name: 'Banho e Tosa',
+        description: 'Nosso serviço de banho e tosa transforma seu pet em uma verdadeira estrela! Nossos profissionais dedicados cuidam da higiene, beleza e bem-estar do seu companheiro, deixando-o limpo, cheiroso e com um visual incrível. Seu pet merece esse mimo!',
+        img: 'https://picsum.photos/2000/1000'
+    },
+    {
+        id: 3,
+        name: 'Spa Day',
+        description: 'Proporcione ao seu pet um dia de relaxamento e luxo com o nosso serviço de Spa Day. Mime seu amigo peludo com banho relaxante, massagem suave, tratamento facial e unhas perfeitas. Um dia de mimos e bem-estar para seu pet.',
+        img: 'https://picsum.photos/2000/1000'
+    }
+]
+</script>
 
 <style scoped>
 .services {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     padding: 10px 5px;
 }
 
@@ -50,7 +68,7 @@
     align-items: center;
     width: 300px;
     margin: 1rem;
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 1px 1px 10px #ccc;
     padding: 1rem;
     border-radius: 10px;

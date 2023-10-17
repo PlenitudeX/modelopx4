@@ -171,8 +171,6 @@
 
 
 .product-button {
-  background-color: #ffa600;
-  color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -182,5 +180,6 @@
 }
 
 .product-button:hover {
-  background-color: #d58a00;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }

@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer :style="{background}">
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
@@ -27,6 +27,18 @@
 </footer>
 </template>
 
+<script setup lang="ts">
+import Tema from '../../tema.json'
+
+const props = defineProps<{
+    tema: string
+}>()
+
+const style = props.tema
+
+const background = Tema[style].$schema.Footer
+
+</script>
 
 <style scoped>
 footer {

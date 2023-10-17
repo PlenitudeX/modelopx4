@@ -1,19 +1,33 @@
 <template>
-    <section id="destaque">
-        <h1>Nossos Produtos Destaques</h1>
+    <section :style="{background: fundo}" id="destaque">
+        <h1 :style="{color: primary}">Nossos Produtos Destaques</h1>
         <div class="products">
-            <div class="product" v-for="product in products" :key="product.id">
+            <div :style="{background: white}" class="product" v-for="product in products" :key="product.id">
                 <img :src="product.image" alt="Imagem do Produto">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
                 <p>Preço: R$ {{ product.price }}</p>
-                <button class="product-button">Comprar</button>
+                <button :style="{background: primary, color: white}" class="product-button">Comprar</button>
             </div>
         </div>
     </section>
 </template>
 
 <script setup lang="ts">
+import Tema from '../../tema.json'
+
+const props = defineProps<{
+    tema: string
+}>()
+
+const style = props.tema
+
+const primary = Tema[style].$schema.Primary
+const white = Tema[style].$schema.White
+const fundo = Tema[style].$schema.Body
+
+
+
 const products = [
     {
         id: 1,
@@ -44,7 +58,7 @@ const products = [
 h1 {
     font-size: 2rem;
     font-weight: 700;
-    margin: 2rem 0 0;
+    padding: 2rem 0 0;
     text-align: center;
 }
 
@@ -61,7 +75,8 @@ h1 {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ccc;
 }
 
 .product img {
@@ -109,17 +124,6 @@ h1 {
         font-size: 1rem;
         font-weight: 400;
         margin: 0.5rem 0;
-    }
-
-    .product-button {
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        border-radius: 5px;
-        cursor: pointer;
     }
 }
 </style>

@@ -1,21 +1,21 @@
 <template>
     <div>
         <!-- BANNER -->
-        <Banner />
+        <Banner :tema="Tema" />
         <!-- PRODUTOS EM DESTAQUE -->
-        <Destaques />
+        <Destaques :tema="Tema" />
         <!-- CONHEÇA NOSSA EQUIPE -->
         <section id="equipe">
           <h1>Conheça quem cuida do seu pet!</h1>
-          <VPTeamMembers size="small" :members="members" />
+          <VPTeamMembers size="small" :members="members" :tema="Tema" />
         </section>
         <!-- SERVIÇOS -->
-        <Servicos />
+        <Servicos :tema="Tema" />
         <!-- CONTATO -->
-        <Contato />
+        <Contato :tema="Tema" />
     </div>
     <!-- FOOTER -->
-    <Footer />
+    <Footer :tema="Tema" />
 </template>
 
 <script setup lang="ts">
@@ -25,6 +25,9 @@ import Servicos from "./Componentes/Serviços.vue";
 import Contato from "./Componentes/Contato.vue";
 import Footer from "./Componentes/Footer.vue";
 import { VPTeamMembers } from 'vitepress/theme'
+import tema from '../tema.json'
+
+const Tema = window.location.search.slice(-1)
 
 const members = [
   {

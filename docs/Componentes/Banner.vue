@@ -1,16 +1,31 @@
 <template>
     <section id="banner" class="banner">
-        <div class="fundo">
+        <div :style="{color}" class="fundo">
             <h1>Bem-vindo à PetShop Amigo Fiel</h1>
             <p>Na PetShop Amigo Fiel, amamos animais tanto quanto você. Nossa loja é o paraíso para todos os amantes de
                 animais de estimação, onde você encontrará tudo o que precisa para cuidar e mimar seu companheiro peludo.
             </p>
             <a href="#contato">
-                <button class="product-button">Saiba mais</button>
+                <button :style="{background: ButtonBackground, color: ButtonColor}" class="product-button">Saiba mais</button>
             </a>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+import Tema from '../../tema.json'
+
+const props = defineProps<{
+    tema: string
+}>()
+
+const style = props.tema
+
+const color = Tema[style].$schema.Primary
+const ButtonBackground = Tema[style].$schema.Secondary
+const ButtonColor = Tema[style].$schema.White
+
+</script>
 
 <style scoped>
 .banner {
@@ -22,7 +37,7 @@
 
 .banner .fundo {
     background-color: rgba(131, 68, 4, 0.27);
-    color: #3498db;
+    /* color: #3498db; */
     height: 100%;
     text-align: center;
     padding: 100px 20px;
@@ -41,7 +56,7 @@
 }
 
 @media (max-width: 768px) {
-    
+
 
     .banner .fundo {
         padding: 50px 20px;
@@ -57,7 +72,7 @@
 }
 
 @media (max-width: 576px) {
-    
+
 
     .banner .fundo {
         padding: 20px 20px;
@@ -73,7 +88,7 @@
 }
 
 @media (max-width: 400px) {
-    
+
 
     .banner .fundo {
         padding: 20px 20px;
