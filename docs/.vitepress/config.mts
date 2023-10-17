@@ -31,6 +31,7 @@ const makePostRequest = async () => {
   }
 };
 
+
 const teste =  await makePostRequest();
 
 // const nome = JSON.parse(teste);
