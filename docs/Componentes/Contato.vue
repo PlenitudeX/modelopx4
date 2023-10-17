@@ -30,7 +30,7 @@ const props = defineProps<{
     tema: string
 }>()
 
-const style = props.tema
+const style = props.tema || 0
 
 const title = Tema[style].$schema.Primary
 const backButton = Tema[style].$schema.Secondary

@@ -19,7 +19,7 @@ const props = defineProps<{
     tema: string
 }>()
 
-const style = props.tema
+const style = props.tema || 0
 
 const color = Tema[style].$schema.Primary
 const ButtonBackground = Tema[style].$schema.Secondary
@@ -37,7 +37,6 @@ const ButtonColor = Tema[style].$schema.White
 
 .banner .fundo {
     background-color: rgba(131, 68, 4, 0.27);
-    /* color: #3498db; */
     height: 100%;
     text-align: center;
     padding: 100px 20px;
@@ -88,12 +87,6 @@ const ButtonColor = Tema[style].$schema.White
 }
 
 @media (max-width: 400px) {
-
-
-    .banner .fundo {
-        padding: 20px 20px;
-    }
-
     .banner h1 {
         font-size: 1.2rem;
     }

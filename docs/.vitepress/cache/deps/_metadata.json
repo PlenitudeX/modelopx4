@@ -1,35 +1,25 @@
 {
-  "hash": "814af92f",
-  "browserHash": "493456d3",
+  "hash": "d3cd8533",
+  "browserHash": "f069c847",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "c7bd76e6",
+      "fileHash": "8be4b9d5",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "4352f508",
+      "fileHash": "30655a89",
       "needsInterop": false
     },
     "axios": {
       "src": "../../../../node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "966791fd",
+      "fileHash": "4c2ed954",
       "needsInterop": false
-    },
-    "mongodb": {
-      "src": "../../../../node_modules/mongodb/lib/index.js",
-      "file": "mongodb.js",
-      "fileHash": "af9028d0",
-      "needsInterop": true
     }
   },
-  "chunks": {
-    "chunk-6NOISVLF": {
-      "file": "chunk-6NOISVLF.js"
-    }
-  }
+  "chunks": {}
 }

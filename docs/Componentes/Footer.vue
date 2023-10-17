@@ -17,9 +17,9 @@
             <div class="footer-social">
                 <h3>Redes Sociais</h3>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
+                    <li><a :style="{color: white}" href="#">Facebook</a></li>
+                    <li><a :style="{color: white}" href="#">Instagram</a></li>
+                    <li><a :style="{color: white}" href="#">Twitter</a></li>
                 </ul>
             </div>
         </div>
@@ -34,15 +34,15 @@ const props = defineProps<{
     tema: string
 }>()
 
-const style = props.tema
+const style = props.tema || 0
 
 const background = Tema[style].$schema.Footer
+const white = Tema[style].$schema.White
 
 </script>
 
 <style scoped>
 footer {
-    background-color: #3498db;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -92,7 +92,6 @@ footer {
 }
 
 .footer-social a {
-    color: #fff;
     text-decoration: none;
 }
 

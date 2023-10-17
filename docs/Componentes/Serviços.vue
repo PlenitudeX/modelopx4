@@ -18,7 +18,7 @@ const props = defineProps<{
     tema: string
 }>()
 
-const style = props.tema
+const style = props.tema || 0
 
 const body = Tema[style].$schema.Body
 const Primary = Tema[style].$schema.Primary
@@ -52,7 +52,6 @@ const services = [
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: #fafafa; */
     padding: 10px 5px;
 }
 
@@ -68,7 +67,6 @@ const services = [
     align-items: center;
     width: 300px;
     margin: 1rem;
-    /* background-color: #fff; */
     box-shadow: 1px 1px 10px #ccc;
     padding: 1rem;
     border-radius: 10px;

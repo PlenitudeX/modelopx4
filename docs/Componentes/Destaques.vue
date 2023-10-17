@@ -20,7 +20,7 @@ const props = defineProps<{
     tema: string
 }>()
 
-const style = props.tema
+const style = props.tema || 0
 
 const primary = Tema[style].$schema.Primary
 const white = Tema[style].$schema.White

@@ -26,7 +26,8 @@ import Contato from "./Componentes/Contato.vue";
 import Footer from "./Componentes/Footer.vue";
 import { VPTeamMembers } from 'vitepress/theme'
 import { onMounted, ref } from 'vue'
-import axios from 'axios'
+// import axios from 'axios'
+
 
 const Tema = window.location.search.slice(-1)
 
@@ -63,32 +64,8 @@ const body = {
   "projection": { "_id": false },
 };
 
-const makePostRequest = async () => {
-  try {
-    const response = await axios.post(
-      'https://sa-east-1.aws.data.mongodb-api.com/app/data-cujkc/endpoint/data/v1/action/find',
-      body,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`
-        }
-      }
-    );
-    console.log(response.data.documents);
+// const
 
-
-    // Lide com a resposta da requisição
-    info.value = response.data.documents
-    return info.value
-  } catch (error) {
-    info.value = 'Sem dados'
-  }
-};
-
-onMounted(() => {
-  makePostRequest()
-})
 
 </script>
 
