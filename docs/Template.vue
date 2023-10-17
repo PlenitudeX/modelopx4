@@ -25,7 +25,8 @@ import Servicos from "./Componentes/Serviços.vue";
 import Contato from "./Componentes/Contato.vue";
 import Footer from "./Componentes/Footer.vue";
 import { VPTeamMembers } from 'vitepress/theme'
-import tema from '../tema.json'
+import { onMounted, ref } from 'vue'
+import axios from 'axios'
 
 const Tema = window.location.search.slice(-1)
 
@@ -51,6 +52,44 @@ const members = [
     title: 'Veterinário',
   },
 ]
+
+
+const info = ref('');
+const apiKey = 'ePYExNrjYIelZMMPOxTxqaB42saDaaqizfGIoX8nv0koqkQRlb81sOZNz2nLRh6I';
+const body = {
+  "collection": "Afiliado",
+  "database": "Executiva",
+  "dataSource": "ClusterPx",
+  "projection": { "_id": false },
+};
+
+const makePostRequest = async () => {
+  try {
+    const response = await axios.post(
+      'https://sa-east-1.aws.data.mongodb-api.com/app/data-cujkc/endpoint/data/v1/action/find',
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        }
+      }
+    );
+    console.log(response.data.documents);
+
+
+    // Lide com a resposta da requisição
+    info.value = response.data.documents
+    return info.value
+  } catch (error) {
+    info.value = 'Sem dados'
+  }
+};
+
+onMounted(() => {
+  makePostRequest()
+})
+
 </script>
 
 <style scoped>

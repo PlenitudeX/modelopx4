@@ -1,19 +1,35 @@
 {
-  "hash": "54be138d",
-  "browserHash": "d33e66d8",
+  "hash": "814af92f",
+  "browserHash": "493456d3",
   "optimized": {
     "vue": {
-      "src": "../../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "e02bcac5",
+      "fileHash": "c7bd76e6",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
+      "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "bb74965e",
+      "fileHash": "4352f508",
       "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "966791fd",
+      "needsInterop": false
+    },
+    "mongodb": {
+      "src": "../../../../node_modules/mongodb/lib/index.js",
+      "file": "mongodb.js",
+      "fileHash": "af9028d0",
+      "needsInterop": true
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-6NOISVLF": {
+      "file": "chunk-6NOISVLF.js"
+    }
+  }
 }
