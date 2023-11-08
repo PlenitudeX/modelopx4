@@ -151,3 +151,7 @@ html.dark {
 .VPNavBarMenu a.VPNavBarMenuLink, .title {
   color: black !important;
 }
+
+.container .top, .container .middle, span.bottom {
+  background-color: black !important;
+}
