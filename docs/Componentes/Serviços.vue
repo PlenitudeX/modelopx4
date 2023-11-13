@@ -61,6 +61,12 @@ const services = [
     justify-content: center;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
 .service {
     display: flex;
     flex-direction: column;

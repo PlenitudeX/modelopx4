@@ -34,21 +34,21 @@ const products = [
         name: 'Ração Premium para Cães',
         description: 'Ração de alta qualidade para cães adultos.',
         price: 39.99,
-        image: 'https://picsum.photos/2000/1000'
+        image: 'https://picsum.photos/2000/900'
     },
     {
         id: 2,
         name: 'Coleira de Couro',
         description: 'Coleira resistente e elegante para seu cão.',
         price: 19.99,
-        image: 'https://picsum.photos/2000/1000'
+        image: 'https://picsum.photos/2000/900'
     },
     {
         id: 3,
         name: 'Brinquedo Interativo para Gatos',
         description: 'Mantenha seu gato entretido por horas.',
         price: 12.99,
-        image: "https://picsum.photos/2000/1000"
+        image: "https://picsum.photos/2000/900"
     }
 ]
 </script>

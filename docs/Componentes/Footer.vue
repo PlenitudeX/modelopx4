@@ -1,30 +1,34 @@
 <template>
-    <footer :style="{background}">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h3>Pet & Cia</h3>
-                <p>O seu melhor amigo merece o melhor cuidado.</p>
+    <footer :style="{ background, color }">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Pet & Cia</h3>
+                    <p>O seu melhor amigo merece o melhor cuidado.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><strong>Endereço:</strong> Rua das Petúnias, 1234</li>
+                        <li><strong>Telefone:</strong> (55) 5555-5555</li>
+                        <li><strong>Email:</strong> info@petecia.com</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a :style="{ color }" href="#">Facebook</a></li>
+                        <li><a :style="{ color }" href="#">Instagram</a></li>
+                        <li><a :style="{ color }" href="#">Twitter</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h3>Contato</h3>
-                <ul>
-                    <li><strong>Endereço:</strong> Rua das Petúnias, 1234</li>
-                    <li><strong>Telefone:</strong> (55) 5555-5555</li>
-                    <li><strong>Email:</strong> info@petecia.com</li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Redes Sociais</h3>
-                <ul>
-                    <li><a :style="{color: white}" href="#">Facebook</a></li>
-                    <li><a :style="{color: white}" href="#">Instagram</a></li>
-                    <li><a :style="{color: white}" href="#">Twitter</a></li>
-                </ul>
+            <div class="footer-bottom">
+                &copy; 2023 Oficina Mecânica. Feito por <a :style="{ color }"
+                    href="https://www.instagram.com/plenitude_x/">Plenitudex</a>.
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </template>
 
 <script setup lang="ts">
@@ -37,14 +41,13 @@ const props = defineProps<{
 const style = props.tema || 0
 
 const background = Tema[style].$schema.Footer
-const white = Tema[style].$schema.White
+const color = Tema[style].$schema.White
 
 </script>
 
 <style scoped>
 footer {
-    color: #fff;
-    padding: 20px 0;
+    padding: 20px 0 0;
     text-align: center;
 }
 
@@ -59,7 +62,9 @@ footer {
     margin: 0 1rem;
 }
 
-.footer-logo h3, .footer-contact h3, .footer-social h3 {
+.footer-logo h3,
+.footer-contact h3,
+.footer-social h3 {
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 1rem;
@@ -76,13 +81,15 @@ footer {
     margin: 0 1rem;
 }
 
-.footer-contact ul, .footer-social ul {
+.footer-contact ul,
+.footer-social ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-contact li, .footer-social li {
+.footer-contact li,
+.footer-social li {
     margin: 0.5rem 0;
 }
 
@@ -99,8 +106,13 @@ footer {
     text-decoration: underline;
 }
 
-.footer-logo, .footer-contact, .footer-social {
+.footer-logo,
+.footer-contact,
+.footer-social {
     padding: 15px 0
 }
 
+.footer-bottom {
+    padding: 10px 0;
+}
 </style>
